@@ -1,0 +1,234 @@
+.skeleton{
+    height: 370px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    background: #aca9a9b8;
+    border-radius: 16px;
+}
+.skeleton .details{
+    position: absolute;
+    bottom: 4%;
+    width: 90%;
+    left: 5%;
+}
+.skeleton .details h3,
+.skeleton .details ul,
+.skeleton .details .reviews{
+    margin: 5% 0;
+    position: relative
+}
+.skeleton .details h3{
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.skeleton .details ul{
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    height: 13px;
+}
+.skeleton .details .reviews{
+    width: 100%;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    height: 20px;
+}
+.loadings{
+    position: relative;
+    background-color: #f1f1f1 !important;
+    overflow: hidden;
+}
+.loadings::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(90deg, transparent, #aaaaaa36, transparent);
+    animation: loading 1.7s infinite linear
+}
+.translate{
+    position: relative !important;
+    overflow: hidden;
+    background-color: #f1f1f1 !important;
+
+}
+.translate::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    animation: translate 1.7s infinite linear
+}
+.result-skeleton{
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    min-height: 172px;
+    margin-top: 16px;
+}
+.result-house{
+    background: #f1f1f1;
+}
+.result-description{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.result-description > div:first-child{
+    flex-basis: 60%;
+    flex-grow: 0;
+}
+.result-description > div:last-child{
+    flex-basis: 30%;
+    flex-grow: 0;
+}
+.result-skeleton .result-description h3{
+    width: 70%;
+    height: 19px;
+    background: #f1f1f1;
+    border-radius: 2px
+}
+.result-skeleton .result-description h4{
+    margin: 10px 0;
+    width: 80%;
+    height: 23px;
+    background: #f1f1f1;
+    border-radius: 2px
+}
+.result-skeleton .result-description .simg{
+    height: 80px;
+    width: 80px;
+    border-radius: 5px
+}
+.result-skeleton .result-description p{
+    width: 100%;
+    height: 46px;
+    background: #f1f1f1;
+}
+.result-skeleton .result-description ul{
+    width: 30%;
+    height: 20px;
+    background: #f1f1f1; 
+    border-radius: 20px
+}
+.result-skeleton .result-third{
+    display: flex;
+    justify-content: flex-end;
+}
+.result-skeleton .result-third .result-house-price{
+    width: 40%;
+    height: 24px;
+    background: #f1f1f1; 
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.skeleton-table-data{
+    display: flex;
+    width: 100%;
+    height: 72px;
+    align-items: center;
+    overflow: hidden;
+    & > div{
+        min-width: 160px;
+        height: 40%;
+        margin: 0 30px;
+        border-radius: 4px;
+    }
+    &.rtransactions{
+        &>:first-child{
+            height: 50px;
+            width: 50px;
+            min-width: 50px;
+            border-radius: 50%;
+        }
+    }
+    &.tables{
+        &>:first-child{
+            margin-left: 0;
+        }
+    }
+}
+.small-skeleton{
+    margin: auto;
+    // min-width: 100px;
+    width: 80%;
+    flex: auto;
+
+    height: 23px;
+    background: #f1f1f1;
+    border-radius: 2px
+}
+@media(max-width:767px){
+    .skeleton{
+        min-width:190px !important;
+        height: 271px;
+        border-radius: 20px;
+    }
+    .skeleton .details ul{
+        display: none;
+    }
+    .skeleton .details .reviews{
+        margin-top: 28px;
+    }
+
+
+}
+/* @media(max-width:375px){
+    .skeleton{
+        height: 200px;
+    }
+} */
+@keyframes loading {
+    0% {
+        width: 0%;
+        }
+    40% {
+        width: 100%
+        }
+    50% {
+        width: 200%
+        }
+    60% {
+        width: 100%
+        }
+    100% {
+        width: 0%;
+    }
+  
+  }
+  @keyframes translate {
+    0% {
+        width: 0%;
+        }
+    40% {
+        width: 100%
+        }
+    50% {
+        width: 200%
+        }
+    60% {
+        width: 100%
+        }
+    100% {
+        width: 0%;
+    }
+  
+  }
+  /* .translate {
+    -webkit-animation-name: translate;
+    animation-name: translate;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  } */

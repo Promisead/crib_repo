@@ -1,0 +1,343 @@
+@import "../../../scss/config";
+.dashboard-center{
+    padding-top: 120px !important;
+    .impression{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 40% 14.4% 21% 21%;
+        grid-column-gap: 1.2%;
+       div.sales{
+        border: 1px solid #E5E5E5;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        min-height: 200px;
+        &:nth-child(2){
+            border-radius: 10px;
+        }
+        .sales-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            svg{
+                width: inherit;
+                height: inherit;
+                margin-bottom: 24px;
+            }
+            p{
+                color: rgba(0, 0, 0, 0.87);
+                font-family: Mulish;
+                text-align: center;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            &>:nth-child(2){
+                // &:first-child{
+                    margin-bottom: 12px;
+                    font-size: 24px;
+                    font-weight: bold;
+                // }
+            }
+
+
+        }
+       }
+    }
+    .user{
+        border-radius:10px;
+        min-height: 200px;
+        justify-content:center;
+        display:flex;
+        padding-top:15px;
+        background-image: url(../../../images/illust.svg);
+        position: relative;
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '';
+            background:linear-gradient(90.1deg, #1053FF -108.22%, #FF10D9 104.5%) ;
+            opacity: 0.8;
+            width: 100%;
+            height: 100%;
+            border-radius:10px;
+        }
+        div{
+            z-index: 10;
+            p{
+                color: #fff;
+                font-family: Mulish;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
+                letter-spacing: 0.15px;
+                &:last-child{
+                    font-weight: bold;
+                    font-size: 12px;
+                    margin-top: 15px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
+
+
+    .recents{
+        display: flex;
+        margin-top: 30px;
+        width: 100%;
+        .recent-title{
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 30px;
+            margin-left: 30px;
+            margin-top: 25px;
+            /* identical to box height, or 214% */
+            letter-spacing: 0.15px;
+
+            /* Black / High Emphasis */
+            color: rgba(0, 0, 0, 0.87);
+        }
+        .recent-title-head{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            word-wrap: nowrap;
+            
+            /* or 150% */
+            letter-spacing: 0.1px;
+            
+            /* Black / High Emphasis */
+            color: rgba(0, 0, 0, 0.87);
+        }
+        .recent-title-subhead{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            
+            /* identical to box height, or 125% */
+            letter-spacing: 0.4px;
+            
+            /* Black / Inactive */
+            color: rgba(0, 0, 0, 0.54);
+        }
+        .recent-activity{
+            max-width: 35%;
+            flex-basis: 35%;
+            flex-grow: 0;
+            margin-right: 1.2%;
+            .display-chart,.recent-cribs{
+                border: 1px solid #E5E5E5;
+                box-sizing: border-box;
+                border-radius: 4px;
+                min-height: 248px;
+                width: 100%;
+                .my-chart{
+                    padding: 0 20px;
+                }
+            }
+            .recent-cribs{
+                height: 404px;
+                margin-top: 16px;
+                overflow: hidden;
+                &>div{
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    min-height: 404px;
+                    .recent-cribs-scroll{
+                        overflow-y: scroll;
+                        padding: 0 20px;
+                    }
+                }
+                & >p{
+                    &:last-child{
+                     margin-left: 30px;
+                    }
+                 }
+            }
+        }
+        .recent-transactions{
+            max-width: 68.8%;
+            flex-basis: 68.8%;
+            flex-grow: 0;
+        
+            .recent-transactions-table,  .recent-withdraws-table{
+                padding: 0 20px;
+                tr{
+                    td{
+                        &:nth-child(3){
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 15px;
+
+                            /* identical to box height, or 125% */
+                            letter-spacing: 0.4px;
+
+                            /* Black / Inactive */
+                            color: rgba(0, 0, 0, 0.54);
+                        }
+                        &:nth-child(4){
+                            span{
+                                font-family: Roboto;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 10px;
+                                line-height: 15px;
+                                padding: 4px 15px;
+                                min-width: 74px;
+                                display: inline-block;
+                                /* identical to box height, or 125% */
+                                letter-spacing: 0.4px;
+                                border-radius: 5px;
+                                text-align: center;
+                                &.tpending,&.wdeclined{
+                                    background: #FFB2B2;
+                                    color: #860909;
+
+                                }
+                                &.tdelivered{
+                                    background: #B2CCFF;
+                                    color: #400986;
+
+                                }
+                                &.wpending{
+                                    background: #E3D55C;
+                                    color: #fff;
+
+                                }
+                                &.wdelivered{
+                                    background: #55BA18;
+                                    color: #fff;
+
+                                }
+                            }
+                        }
+                        &:last-child{
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 21px;
+
+                            /* or 150% */
+                            letter-spacing: 0.1px;
+
+                            /* Black / High Emphasis */
+                            color: rgba(0, 0, 0, 0.87);
+                        }
+                    }
+                }
+
+            }
+
+
+            .recent-withdraws-table{
+                tr{
+                    td{
+                        &:nth-child(2){
+                            font-family: Roboto;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 15px;
+
+                            /* identical to box height, or 125% */
+                            letter-spacing: 0.4px;
+
+                            /* Black / Inactive */
+                            color: rgba(0, 0, 0, 0.54);
+                        }
+                        &:nth-child(3){
+                            span{
+                                font-family: Roboto;
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 10px;
+                                line-height: 15px;
+                                padding: 4px 15px;
+                                min-width: 74px;
+                                display: inline-block;
+                                /* identical to box height, or 125% */
+                                letter-spacing: 0.4px;
+                                border-radius: 5px;
+                                text-align: center;
+                                &.tpending{
+                                    background: #FFB2B2;
+                                    color: #860909;
+
+                                }
+                                &.tdelivered{
+                                    background: #B2CCFF;
+                                    color: #400986;
+
+                                }
+                                &.wpending{
+                                    background: #E3D55C;
+                                    color: #fff;
+
+                                }
+                                &.wdelivered{
+                                    background: #55BA18;
+                                    color: #fff;
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            .transactions,.recent-withdraws{
+                border: 1px solid #E5E5E5;
+                box-sizing: border-box;
+                border-radius: 4px;
+                min-height: 334px;
+                & >p{
+                    &:last-child{
+                     margin-left: 30px;
+                    }
+                 }
+            }
+            .recent-withdraws{
+                margin-top: 16px;
+            }
+            
+        }
+    }
+}
+@include mediaSm {
+    .dashboard-center{
+        padding: 70px 10px 90px !important;
+        .impression, .tips{
+            margin-top: 30px;
+        }
+        .impression{
+            grid-template-columns: repeat(2, 48%);
+            grid-row-gap: 16px;
+            justify-content: space-between;
+        }
+        .recents{
+            flex-wrap: wrap;
+            .recent-activity, .recent-transactions{
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+            .recent-transactions{
+                margin-top: 30px;
+                overflow: hidden;
+            }
+        }
+    }
+}

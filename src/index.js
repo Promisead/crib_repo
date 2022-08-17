@@ -2,16 +2,42 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import configureStore from './state/store';
+import { checkLoggedIn, propertyTypes } from './apis/server';
+import { getDashboard } from './helpers/helpers';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+const renderApp = (preloadedState, types, dashboard) => {
+  const store = configureStore({
+    user: preloadedState,
+    propertyTypes: types.types,
+    topTypes: types.topTypes,
+    topCities: types.topCities,
+    dashboard: dashboard,
+  });
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(
+    <Provider store={store}>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </Provider>,
+    document.getElementById('root')
+  );
+};
+(async () =>
+  renderApp(await checkLoggedIn(), await propertyTypes(), getDashboard()))();
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

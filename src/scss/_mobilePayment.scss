@@ -1,0 +1,72 @@
+
+// Widescreens
+@include mediaXL {
+
+}
+
+// iPad devices
+@include mediaLg {
+    .payment-left{
+        display: none;
+    }
+    section{
+        width: 55vw;
+        margin-right: 0;
+        margin-left: 7rem;
+
+        .house-payment-details{
+            width: 62%;
+            padding-left: 0;
+            margin-left: 2.5rem;
+
+        }
+
+        aside{
+            width: 30vw;
+            right: -10rem;
+        }
+    }
+}
+
+// Tablets and small Laptops
+@include mediaMd {
+  .payment-left{
+      display: none;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+
+    section{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 3rem;
+        position: unset;
+
+        .house-payment-details{
+            width: 80%;
+            padding-left: 0;
+            // margin-left: 1.5rem;
+            margin: auto;
+            min-height: 40vh;
+            // margin-bottom: 10rem;
+        }
+
+        aside{
+            position: unset;
+            width: 100%;
+            padding-top: 2rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            form{
+                .MuiButtonBase-root{
+                   width: 90%;
+                }
+            }
+
+        }
+    }
+
+}

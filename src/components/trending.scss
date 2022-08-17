@@ -1,0 +1,70 @@
+@import "../scss//config";
+.card{
+    border:1px solid #0066FF; 
+    padding:20px 8px;
+    background-color:  #FAFAFA;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 40px rgba(196, 196, 196, 0.1);
+    border-radius:16px;
+
+
+    min-width: calc(100vw / 4 - 5.4vw);
+    
+    &:hover img{
+        transform: scale(1.1) !important;
+    }
+    .trending-card{
+        border-radius:16px;
+        height:290px;
+        // min-width:249px;
+        position:relative;
+        margin-bottom:20px;
+        background-color: #FAFAFA;
+        // p,h6,h5,span{
+        //     color: #707070;
+        // }
+        .img{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            img{
+                width: 100%;
+                object-fit: cover;
+                height: auto;
+                border-radius: 16px 16px 0 0;
+                height: 100%;
+                max-height: 100%;
+                transform: scale(1);
+                transition: transform 300ms ease-in-out;
+            }
+        }
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            opacity: 0.35;
+            border-radius: 16px 16px 0 0;
+            &:hover{
+                ~img{
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@include mediaSm {
+    .card{
+        &:hover{
+            transform: scale(1);
+            
+        }
+        .trending-card{
+            min-width:190px !important;
+            height: 255px;
+        }
+    }
+}

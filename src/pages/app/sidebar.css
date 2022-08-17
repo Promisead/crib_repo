@@ -1,0 +1,157 @@
+/* menu section */
+.sidebar{
+    min-height: 100vh;
+}
+.sidebar-menu{
+    width: 100%;
+}
+.sidebar-menu .s-menu{
+    grid-column-start: 2;
+    display: grid;
+    width: 100%;
+    grid-row-gap: 10px;
+    margin-top: 44px;
+
+}
+.sidebar-menu .s-menu li{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    position: relative;
+    
+}
+.sidebar-menu .s-menu a{
+    padding: 0;
+    line-height: normal;
+    margin: 0 6px;
+  
+}
+.sidebar-menu .s-menu a li,
+.sidebar-menu .s-menu a li span[class*='icon-']::before{
+    color: rgba(0, 0, 0, 0.87);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    font-style: normal;
+    transition: color 0.3s;
+    
+}
+.sidebar-menu .s-menu a:hover li,
+.sidebar-menu .s-menu a:hover li span[class*='icon-']::before{
+    color: rgba(0, 0, 0,1);
+    
+}
+
+
+.sidebar-menu .s-menu .is-active{
+    background: #E3F2FD !important;
+    border-radius: 4px;
+    position: relative;
+    transition: background 0.3s;
+}
+.sidebar-menu .s-menu .is-active:hover{
+    background: #B8D6EB !important;
+}
+.sidebar-menu .s-menu .is-active li{
+    color:#2196F3;
+    transition: color 0.3s;
+
+}
+.sidebar-menu .s-menu .is-active:hover li{
+    color:#095DA1;
+
+}
+.s-menu .switches{
+    display: none;
+}
+.sidebar-menu .s-menu li :first-child{
+    margin-right: 25px;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+.sidebar-menu .s-menu li:last-child label{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    /* or 150% */
+    letter-spacing: 0.1px;
+    display: flex;
+    flex-shrink: 0;
+}
+.sidebar-menu .s-menu .is-active,
+.sidebar-menu .s-menu .is-active span[class*='icon-']::before{
+    color: var(--text-blue);
+
+}
+.app-logo-dashboard{
+    height: 86px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.app-logo-dashboard p{
+    margin-left: 25px;
+    color: #1976D2;
+    font-size: 20px;
+}
+.app-logout{
+    border-top: 1px solid #E5E5E5;
+    padding-left: 5px;
+    
+}
+.app-logout svg{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.app-logout button{
+    background-color: transparent;
+    border: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    /* or 150% */
+    letter-spacing: 0.1px;
+
+    cursor: pointer;
+    color: #A60E0E;
+
+}
+.dashboard-illust{
+    background-image: url(../../images/dashboard-illust.png);
+    width: 100%;
+    height:138px ;
+    background-size: contain;
+    margin-top: 20px;
+    background-repeat: no-repeat;
+}
+@media (max-width:767px){
+    .s-menu .switches{
+        display: flex;
+        background-color: #fff;
+        margin: 0 auto;
+
+    }
+    .s-menu .switches > :first-child{
+        color: #046FA7;
+    }
+    /* .sidebar-menu{
+        display: block;
+        margin: 0 auto !important;
+    }
+    .sidebar-menu .s-menu{
+        display: block;
+    }
+    .sidebar-menu .s-menu li{
+        height: 36px;
+    } */
+}

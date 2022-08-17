@@ -1,0 +1,36 @@
+@include mediaSm{
+
+    .calendar__details{
+        display: block;
+        margin-left: 1rem;
+
+    }
+
+    .calendar__heading, .calendar__details{
+        margin-left: 1rem;
+    }
+
+    .actual__calendar{
+        width: 80%;
+        margin-top: 2rem;
+        
+    }
+}
+
+@include mediaLg{
+    .calendar__details{
+        display: block;
+        margin-left: 1rem;
+
+    }
+
+    .calendar__heading, .calendar__details{
+        margin-left: 1rem;
+    }
+
+    .actual__calendar{
+        width: 80%;
+        margin-top: 2rem;
+        
+    }
+}

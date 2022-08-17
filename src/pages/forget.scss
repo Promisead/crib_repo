@@ -1,0 +1,32 @@
+.forget-password{
+    padding-top: 200px;
+    margin-bottom: 200px;
+    .signin{
+        &>p{
+            margin-bottom:50px ;
+            text-align: left;
+        }
+    }
+    form{
+        .form-check{
+            display: flex;
+            align-items: center;
+            p{
+                display: flex;
+                align-items: center;
+                a{
+                    color: #0066FF;
+                    padding: 0;
+                }
+            }
+            button{
+                width: 40%;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+.signin-left{
+    margin-top: 200px;
+    
+}

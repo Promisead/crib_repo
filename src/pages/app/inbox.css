@@ -1,0 +1,253 @@
+.inbox{
+    width: 75%;
+    margin: 0 17.8% 0 7.2%;
+}
+.inbox-head{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+.inbox-title h4{
+    font-size: 20px;
+    /* font-family: 'Roboto-Bold'; */
+    color: var(--text-blue);
+}
+.inbox-icons{
+    display: grid;
+    align-items: center;
+}
+.inbox-menu{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.inbox-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.inbox-men li:first-child{
+    margin-right: 40px;
+}
+
+.inbox-menu li span[class*="icon-"]:hover::after{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: var(--shadow);
+    position: absolute;
+    left: -8px;
+    top: -7px;
+    content: '';
+    z-index: -1;
+}
+.my-video{
+    display: none;
+    position: absolute;
+    top:0;
+}
+.inbox-body{
+    margin-top: 30px;
+    height: 450px;
+    width: 100%;
+    background: var(--white);
+    border: 1px solid #DCDCDC;
+    overflow: auto;
+}
+.inbox-body::-webkit-scrollbar{
+    width: 16px;
+    border-top-right-radius:32px; 
+}
+.inbox-body::-webkit-scrollbar-track{
+    background:  #EFEFEF;
+}
+.inbox-body::-webkit-scrollbar-thumb{
+    background: var(--text-blue);
+    box-shadow: 0px 3px 6px var(--shadow);
+    border-radius: 13px;
+}
+.table-head,
+.inbox-body table{
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    
+}
+.inbox-body table tr{
+    display: table-row !important;
+    height: 53px;
+    cursor: pointer;
+}
+.inbox-body table tr:hover{
+    background:  #EFEFEF;
+}
+.table-head tr th,
+.inbox-body table tr td{
+    padding:15px;
+    font-size: 14px;
+}
+.table-head tr th{
+    font-weight: 700;
+}
+.table-head tr:last-child th,
+.inbox-body table tr:last-child td{
+    border: none
+}
+.table-head tr th:first-child,
+.inbox-body table tr td:first-child{
+    padding-left:45px !important;
+}
+.table-head .table-title li:first-child .radio,
+.inbox-body table tr td:first-child .radio,
+.property-group .prop-type li .radio{
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.history{
+    position: relative;
+}
+.history .radio .radio-mark,
+.history  .radio .radio-mark,
+.history  .radio .radio-mark{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 3px 6px var(--shadow);
+    background: var(--white);
+    border-radius: 4px;
+}
+.history  .radio-mark::after{
+    position: absolute;
+    content: '';
+    display: none;
+}
+.history .radio input,
+.history  .radio input,
+.history .radio input{
+    display: none;
+}
+.history .radio input:checked ~ .radio-mark::after,
+.history .radio input:checked ~ .radio-mark::after,
+.history  .radio input:checked ~ .radio-mark::after{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: block;
+    background: var(--text-blue);
+}
+
+
+.table-head .table-title li:first-child .radio,
+.inbox-body table tr td:first-child .radio,
+.property-group .prop-type li .radio{
+    position: relative;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.table-head .table-title li:first-child .radio .radio-mark,
+.inbox-body table tr td:first-child .radio .radio-mark,
+.property-group .prop-type li .radio .radio-mark{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 3px 6px var(--shadow);
+    background: var(--white);
+    border-radius: 4px;
+}
+.radio-mark::after{
+    position: absolute;
+    content: '';
+    display: none;
+}
+.table-head .table-title li:first-child .radio input,
+.inbox-body table tr td:first-child .radio input,
+.property-group .prop-type li .radio input{
+    display: none;
+}
+.table-head .table-title li:first-child .radio input:checked ~ .radio-mark::after,
+.inbox-body table tr td:first-child .radio input:checked ~ .radio-mark::after,
+.property-group .prop-type li .radio input:checked ~ .radio-mark::after{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: block;
+    background: var(--text-blue);
+}
+
+.inbox-body table tr td:nth-child(2) a,
+.inbox-body table tr td:last-child a,
+.inbox-body table tr td:last-child span{
+    /* font-family: 'Poppins-Medium'; */
+    font-size: 12px;
+    color: #6F8194;
+    font-weight: 100;
+}
+.inbox-body table tr td:nth-child(3) a{
+    /* font-family: 'Poppins-Bold'; */
+    font-size: 13px;
+}
+.inbox-body table tr td:nth-child(3) a,
+.inbox-body table tr td:last-child a{
+    color: var(--text-blue);
+}
+.new{
+    background: #DCEEF5 !important;
+}
+.new td{
+    border-bottom: 1px solid var(--text-blue) !important;
+}
+.unread{
+    background: #EFEFEF !important;
+}
+.user-close{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform:translateY(-50%);
+    background: transparent !important;
+    outline: 0 !important;
+    border:none !important;
+    cursor: pointer;
+}
+.user-close:hover{
+    background: transparent !important
+}
+@media (max-width:767px){
+    .inbox{
+        width: 88%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .inbox-body{
+        height: auto;
+        border: none;
+        box-shadow: none;
+    }
+}

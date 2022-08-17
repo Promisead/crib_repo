@@ -1,0 +1,97 @@
+ @import "./config";
+ .breadcumb{
+     display: none;
+ }
+ @include mediaSm{
+
+    .breadcumb{
+        display: block;
+        ul{
+         display: flex;
+         list-style: none;
+         align-items: center;
+         margin-bottom: 15px;
+         li{
+             font-weight: 500;
+             font-size: 12px;
+             line-height: 15px;
+ 
+             
+             color: #0066FF;
+             svg{
+                 margin-left: 10px;
+             }
+             a{
+                 font-weight: 500;
+                 font-size: 12px;
+                 line-height: 15px;
+                 display: flex;
+                 padding-left: 0;
+                 color: #2E2E2E;
+             }
+         }
+        }
+        .search-calendar{
+            &>div{
+                &:first-child{
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    /* identical to box height */
+
+                    color: #2E2E2E;
+                }
+            }
+        }
+
+        .search-inputs-dates{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .search-inputs{
+            background: #FFFFFF;
+            border: 1px solid #005C9F;
+            box-sizing: border-box;
+            border-radius: 48px;
+            height: 48px;
+            width: 100%;
+            display: flex;
+            padding-left: 16px;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0px 4px 4px rgba(157, 157, 157, 0.1);
+            backdrop-filter: blur(11px);
+
+            button{
+                background-color: transparent;
+                border: none;
+                svg{
+                    height: 22px;
+                    width: 22px;
+                    path{
+                        fill: #005C9F;
+                    }
+                }
+            }
+            input{
+                width: calc(100% - 20px);
+                height: calc(100%);
+                outline: 0;
+                border: none;
+                border-radius: 48px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                padding: 0 16px;
+
+                /* identical to box height */
+
+                color: #000000;
+
+            }
+        }
+     }
+ }

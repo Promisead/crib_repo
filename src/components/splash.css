@@ -1,0 +1,42 @@
+.app-spinner{
+    height:50px;
+    width:50px;
+    border-width:4px;
+    border-color:#00A8C8;
+    border-style:solid;
+    border-radius:50%;
+    border-right-color:#046FA7;
+    animation: App-logo-spin infinite 1s linear;
+}
+.loading{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  align-items: center;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100000;
+}
+.modal{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #fff;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+@keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

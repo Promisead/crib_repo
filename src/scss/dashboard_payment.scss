@@ -1,0 +1,182 @@
+@import 'config';
+
+.dashboard__earning{
+    padding-top: 120px;
+    user-select: none;
+
+    .paypal{
+        // font-size: 1.6rem;
+        font-stretch: expanded;
+        color: #283593;
+    }
+    h4{
+        color: #1053FF;
+    }
+    &Table{
+        margin-top: 1rem;
+        display: flex;
+        background: #FCFBFB;
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        height: 6rem;
+        margin-bottom: 2.5rem;
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+
+        & > div{
+            flex: auto;
+            border-right: 1px solid #DCDCDC;
+            p{
+                color: #1053FF;
+                font-family: Mulish;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+                color: rgba(0, 0, 0, 0.87);
+                &:first-child{
+                    padding-bottom: .5rem;
+                }
+            }
+            &:last-child{
+                border: none;
+            }
+            .dashboard__amount{
+                
+                font-weight: bold;
+                font-size: 24px;
+                color: #1053FF;
+            }
+        }
+    }
+    .withdrawn-well{
+        width: 90%;
+        background: #EFEFEF;
+        border-radius: 20px;
+        height: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        p{
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+        
+            /* or 150% */
+            letter-spacing: 0.1px;
+        
+            color: #1053FF;
+            margin-left: 30px;
+        }
+    }
+    .cribs-payment-skeleton{
+        &>div{
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    .dashboard__withdraw{
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+        & > button{
+            border: none;
+            border-radius: 5px;
+            margin-right: 1.5rem;
+            padding: 0.5rem 1rem;
+            background:#1053FF;
+            color: #fff;
+            transition: background 0.3s;
+            &:hover{
+                background: #082B83;
+                cursor: pointer;
+            }
+            strong{
+                color: #fff;
+            }
+        }
+
+    }
+
+    #crib-table-container{
+        thead{
+            tr{
+                display: table-row !important; 
+                td{
+                    font-family: Mulish;
+
+                    font-size: 14px;
+                    line-height: 21px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    /* or 150% */
+                    letter-spacing: 0.1px;
+
+                    color: #757575;
+                }
+            }
+        }
+        tbody{
+            tr{
+                display: table-row !important;
+                height: 46px;
+                td{
+                    font-family: Mulish;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 21px;
+
+                    /* or 150% */
+                    letter-spacing: 0.1px;
+
+                    color: #757575;
+                }
+            }
+        }
+    }
+
+    .dashboard__show{
+        display: flex;
+        margin-top: 0.6rem;
+       
+        & > div{
+            box-shadow: 0px 1px 6px #00000029;
+            border: 1px solid #00A8C8;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            margin-right: 2rem;
+            .MuiInputBase-root{
+                padding-right: 0.8rem;
+            }
+            .MuiNativeSelect-icon{
+                color: #00A8C8;
+            }
+            select{
+                padding: .3rem 2rem .3rem .8rem;
+                font-size: .89rem;
+                color: #00A8C8;
+            }
+
+        }
+    }
+    .payment-table{
+        background: #FCFBFB;
+        .MuiTable-root{
+            background: #FCFBFB !important;
+            // td, th, p{
+            //     color: #00A8C8 !important;
+            // }
+        }
+    }
+}
+
+
+@import 'mobileDashboardPayment';

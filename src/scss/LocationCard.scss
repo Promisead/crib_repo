@@ -1,0 +1,73 @@
+@import "config";
+.location__card {
+	position: absolute;
+	top: 120px;
+	background: #ffffff;
+	border-radius: 10px;
+	width: 364px;
+	height: auto;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+
+	&::before {
+		position: absolute;
+		content: "";
+		// width: 37px;
+		// height: 35px;
+		top: -20px;
+		left: 100px;
+		// background: #c4c4c4;
+		// border-radius: 6px;
+        // width: 0;
+        // height: 0;
+        // border-left: 30px solid transparent;
+        // border-right: 30px solid transparent;
+        // border-bottom: 100px solid #c4c4c4;
+	}
+	.image{
+		height: 50px;
+		width: 50px;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.location__result {
+	display: flex;
+	align-items: center;
+	padding-left: 1.5rem;
+	margin-top: 1rem;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	.details {
+		margin-left: 1rem;
+
+		h1 {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 21px;
+			color: #000000;
+		}
+
+		small {
+			font-family: Poppins;
+			font-style: normal;
+			font-weight: 300;
+			font-size: 11px;
+			line-height: 16px;
+			color: #000000;
+		}
+	}
+}
+@include mediaSm {
+.location__card{
+	display: none;
+}
+
+}

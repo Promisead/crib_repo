@@ -1,0 +1,95 @@
+.password-form{
+    width: 100%;
+    margin-top: 80px;
+}
+.password-form form{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+.password-group{
+    margin-top: 30px;
+    position: relative;
+    width: 20%;
+
+
+}
+.password-form h4,
+.deactivate h4{
+    color: #046FA7;
+}
+.deactivate{
+    margin-top: 200px;
+}
+.deactivate button{
+    background: transparent;
+    border: none;
+    color: #046FA7;
+    cursor: pointer;
+}
+.password-group >div{
+    display: flex;
+    border: 1px solid #ACA9A9;
+    align-items: center;
+}
+.password-group >div .MuiIconButton-root{
+    padding: 3px;
+}
+.password-group label{
+    display: block;
+    color: var(--text-blue);
+    margin-bottom: 6px;
+}
+.password-group input{
+    width: 100%;
+    padding: 0 3% 0 9%;
+    font-size: 35px;
+    border: none;
+    font-family: 'Poppins-Medium';
+    color: var(--text-blue);
+    outline: 0;
+    background: transparent;
+    position: relative;
+   
+}
+.password-group input:focus{
+    border-color: var(--bg-blue)
+}
+.password-group button.btn{
+    background: transparent;
+    outline: 0;
+    border: none;
+    font-size: 13px;
+    color: var(--white);
+    background: #046FA7;
+    padding: 13px 45px;
+    cursor: pointer;
+}
+.password-group .eye > *{
+   font-size: 10px;
+}
+
+@media (max-width:767px){
+    .password-form {
+        width: 72%;
+    }
+    .password-group{
+        position: relative;
+    }
+    .password-group input{
+        font-size: 32px;
+        border: 1px solid #707070;
+        border-radius: 32px;
+        color: #090202;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .password-group label{
+        color: #090202;
+    }
+    .password-group button{
+        margin-left: 50%;
+    }
+
+}

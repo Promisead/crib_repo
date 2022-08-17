@@ -1,0 +1,72 @@
+@import "../scss/config";
+.overlays{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    opacity: 0.35;
+    background-color:#C8BB00
+}
+.ds-favourite{
+    z-index:34;
+    position:absolute;
+    height:100%; 
+    width:98%; 
+    top:3% ;
+    left:1%;
+}
+.ms-favourite{
+    display: none;
+}
+@include mediaSm{
+    .s-nav-link{
+        padding: 0 !important;
+    }
+    .fav-search{
+        box-shadow: none !important;
+        min-height: 170px !important;
+        border: 1px solid #0066FF;
+        border-radius: 10px !important;
+        button{
+            min-height: 170px !important;
+            img,.overlays{
+                width: 90%;
+                height: 90%;
+                margin-top: 5%;
+                margin-left: 5%;
+                border-radius: 10px;
+                background-color: #87CBE1;
+            }
+            img{
+                width: 84%;
+                height: 84%;
+                margin-top: 8%;
+                margin-left: 8%;  
+            }
+        }
+        .MuiTypography-subtitle2{
+            display: none;
+        }
+        .ds-favourite{
+            display: none;
+        }
+        .ms-favourite{
+            width: 46px;
+            height: 40px;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0px 10px 0px 20px;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            & > *{
+                font-size: 15px;
+            }
+        }
+    }
+}

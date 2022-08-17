@@ -1,0 +1,150 @@
+@import "../../scss//config";
+
+#crib-table{
+    width: 100%;
+    flex-basis: 100%;
+    flex-grow: 0;
+    #crib-table-row{
+        display: flex;
+        width: 100%;
+        td{
+            padding: 5px 10px;
+            flex-grow: 0;
+            flex-basis: 100%;
+            margin: auto;
+        }
+    }
+}
+#crib-table-container{
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    .crib-table-pagination{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       ul{
+        display: flex;
+        list-style: none;
+        margin-left: calc(30%);
+        li{
+            margin: 0 5px;
+            &:first-child{
+                svg{
+                    margin-right: 10px;
+                }
+            }
+            &:last-child{
+                svg{
+                    margin-left: 10px;
+                }
+            }
+            button{
+                border: none;
+                background-color: transparent;
+                font-family: Mulish;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+
+                /* identical to box height, or 125% */
+                letter-spacing: 0.4px;
+                transition: all 0.3s;
+                /* Black / Inactive */
+                color: rgba(0, 0, 0, 0.54);
+                padding: 4px 5px;
+                cursor: pointer;
+                path{
+                    fill: #C4C4C4;
+                    transition: all 0.3s;
+                }
+
+                &.active, &:hover{
+                    color: #1053FF;
+                    font-weight: bold;
+                    path{
+                        fill: #1053FF;
+                    }
+                }
+                span{
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+                &.disabled-tnav{
+                    color: rgba(0, 0, 0, 0.54) !important;
+                    font-weight: normal;
+                    cursor: default;
+                    path{
+                        fill: #C4C4C4;
+                    }
+                }
+            }
+        }
+       }
+       .crib-table-pagination-range{
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        /* identical to box height, or 125% */
+        letter-spacing: 0.4px;
+        transition: all 0.3s;
+        /* Black / Inactive */
+        color: rgba(0, 0, 0, 0.54);
+        display: flex;
+        p{
+            color: #212121;
+            font-weight: bold;
+            margin-left: 5px;
+
+        }
+       }
+    }
+}
+@include mediaSm{
+    #crib-table{
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar{
+            display: none;
+            width: 0;
+            height: 0;
+        }
+        scroll-behavior: smooth;
+        overflow-y: hidden;
+        box-sizing: border-box;
+        transition:  overflow-x 0.6s;
+    }
+    #crib-table-container{
+        .crib-table-pagination{
+           ul{
+            margin-left: 0;
+            li{
+                margin: 0 5px;
+                &:first-child{
+                    svg{
+                        margin-right: 1px;
+                    }
+                }
+                &:last-child{
+                    svg{
+                        margin-left: 1px;
+                    }
+                }
+            }
+           }
+           .crib-table-pagination-range{
+           }
+        }
+    }
+}

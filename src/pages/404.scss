@@ -1,0 +1,29 @@
+.page-notfound{
+    width: 80%;
+    margin: 0 auto;
+    padding: 200px 0 0px;
+    display: flex;
+    justify-content: center;
+    .container{
+        min-height: 300px;
+        width: 70%;
+        border-radius: 10px;
+        border: 1px solid #0066FF;
+        h3{
+            font-size: 4rem;
+            text-align: center;
+            margin: 30px 0 0;
+        }
+        p{
+            text-align: center;
+            font-size: 21px;
+            margin-bottom: 50px;
+        }
+        a{
+            background-color: #0066ff;
+            color: #fff;
+            margin-left: 40px;
+            
+        }
+    }
+}

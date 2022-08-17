@@ -1,0 +1,130 @@
+@import "../../../scss/config";
+.settins-c{
+    width: 80%;
+    padding-top: 46px;
+    &.renting{
+        margin-left: 7%;
+    }
+    .password-form{
+        h4{
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 21px;
+
+            /* or 105% */
+            letter-spacing: 0.1px;
+
+            color: #1053FF;
+        }
+    }
+    .deactivate{
+        h4{
+            letter-spacing: 0.1px;
+
+            color: #1053FF;
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 21px;
+        }
+        p{
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0.1px;
+            line-height: 21px;
+            button{
+                color: #1053FF;
+                font-family: Mulish;
+                font-style: normal;
+                font-weight: 600;
+                letter-spacing: 0.1px;
+                line-height: 21px;
+            }
+        }
+    }
+    .password-group{
+        label{
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+
+            /* or 150% */
+            letter-spacing: 0.1px;
+
+            color: #212121;
+        }
+        button.btn{
+            background-color: #1053FF !important;
+            padding: 16px 60px;
+            border-radius: 4px;
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+
+            /* or 150% */
+            letter-spacing: 0.1px;
+            transition: background-color 0.3s;
+            &:hover{
+                background-color: #082B83 !important;
+            }
+        }
+        &>div{
+            border: 1px solid #EBEBEB;
+            box-sizing: border-box;
+            border-radius: 4px;
+            input{
+                font-family: Mulish;
+                font-style: normal;
+                border: none;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+
+                /* or 150% */
+                letter-spacing: 0.1px;
+                padding: 13px 16px;
+
+                color: #686F74;
+            }
+        }
+    }
+}
+@include mediaSm{
+    .settins-c{
+        padding: 90px 16px 40px;
+        width: 100%;
+        &.renting{
+            margin-left: 0;
+        }
+        .password-form{
+                width: 100%;
+                margin-top: 0;
+        }
+        .password-group button{
+            margin-left:0;
+        }
+        form{
+            width: 100%;
+            display: unset;
+            .password-group{
+                width: 100%;
+                input{
+                    width: 100%;
+                    flex: 1;
+                }
+
+                button.btn{
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}

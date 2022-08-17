@@ -1,0 +1,95 @@
+@import "../../scss/config";
+.bookings{
+    width: 100%;
+    min-height: min(370px );
+    box-shadow: 0px 0px 3px #00000029;
+    background-color: #FBFBFB;
+    padding:22px;
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 30px;
+        button{
+            padding: 5px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            color: #ACACAC;
+            background-color: #DEDEDE ;
+            cursor: pointer;
+
+        }
+        span{
+            color: #707070;
+            text-transform: capitalize;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    }
+    .booking-display{
+        width: 100%;
+        .booking-dates{
+            width: 100%;
+            table{
+                width: 100%;
+                thead tr{
+                    width: 100%;
+                    th{
+                        font-size: 14px;
+                        color: #AFAFAF;
+                        font-weight: 500;
+                    }
+                }
+                tbody tr{
+                    width: 100%;
+                    td{
+                        text-align: center;
+
+                        button{
+                            
+                            box-sizing: border-box;
+                            background-color: #FFFFFF;
+                            // color: #fff;
+                            cursor: pointer;
+                            font-size: 14px;
+                            color: #000000;
+                            border: 1px solid #CBCBCB;
+                            text-align: center;
+                            padding: 12px 6px;
+                            margin: 6px 0;
+                            width: calc(83.33%);
+                            
+                        }
+                        &.past-month-day{
+                            button{
+                                cursor: default;
+                                color: #8f8f8f;
+                            }
+                        }
+                        &.booked{
+                            button{
+                                background-color: #CBCBCB;
+                                color: #fff;
+                                cursor: default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include mediaSm {
+    .bookings{
+        width: 100%;
+        &-header{
+            span{
+                color: #707070;
+                text-transform: capitalize;
+                font-size: 0.9rem;
+                font-weight: bold;
+            }
+        }
+    }
+}

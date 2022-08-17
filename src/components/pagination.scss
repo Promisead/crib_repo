@@ -1,0 +1,54 @@
+@import "../scss/config";
+.s-nav-pagination{
+    ul{
+        list-style: none;
+        display: flex;
+        li{
+            margin: 0 5px;
+            button{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 1px solid #0066FF;
+                background: #fff;
+                color: #0066FF;
+                font-family: Montserrat;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                transition: all .3s;
+                cursor: pointer;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+                &.disabled{
+                    border-color: #E5E5E5;
+                    color: #E5E5E5;
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+                &.snav-active{
+                    background: #0066FF;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+
+@include mediaSm{
+    .s-nav-pagination{
+        display: flex;
+        justify-content: center;
+        ul{
+            li{
+                button{
+                    cursor: default;
+                }
+            }
+        }
+    }
+}

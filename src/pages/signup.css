@@ -1,0 +1,323 @@
+.label{
+    padding-top: 90px;
+}
+.signup{
+    display: grid;
+    grid-template-columns: 55% 34%;
+    grid-column-gap: 11%;
+    height: 400px;
+}
+.info{
+    position: relative;
+}
+.info::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    /* background: rgba(27, 148, 243, 0.38); */
+    width: 100%;
+    height: 100%;
+}
+.info .inner-items{
+    width: 56%;
+    margin: 35px 0 0 18px;
+    position: relative;
+}
+.info .inner-items .title1{
+    width:100%;
+    height: 70px;
+    background: rgba(255, 215, 14, 0.86);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info .inner-items .title1 h3{
+    font-family: 'Montserrat-Bold';
+    color: var(--white);
+    font-size: 28px;
+}
+.info .inner-items .title2{
+    position: relative;
+    width: 82%;
+    margin: 7px auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.info .inner-items .title2::after{
+    position: absolute;
+    content: '';
+    background: rgba(12, 101, 161, 0.86);
+    height: 100%;
+    width: 94%;
+    top: 0;
+    right: 0;
+}
+.info .inner-items .title2 h2{
+    font-family: 'Montserrat-Bold';
+    font-size: 41px;
+    color: var(--white);
+    z-index: 1;
+}
+.info .inner-items .title2 .boxes{
+ height: 50px;
+ width: 50px;
+ z-index: 1;
+ display: flex;
+ justify-items: center;
+ align-items: center;
+ margin-left: 30px;
+}
+.info .inner-items .title2 .boxes span{
+    width: 20px;
+    height: 20px;
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+    margin-right: -16px;
+    transform: rotate(45deg) skew(18deg, 18deg);
+    
+}
+.form form{
+    width:100%;
+}
+.signup label{
+    margin:0 5px;
+    /* font-family: 'Montserrat-SemiBold'; */
+    font-size: 15px;
+    color:var(--dark-border)
+}
+.form form input[type=text],
+.form form input[type=password],
+.form form input[type=email]{
+    display: block;
+    outline: 0;
+    border: none;
+    width: 93%;
+    padding: 12px 13px;
+    /* font-family: 'Montserrat-Medium'; */
+    font-size: 15px;
+    color:var(--dark-border);
+    position: relative;
+}
+.form form input::placeholder{
+    color:var(--dark-border);
+    opacity: 0.55; 
+}
+.form-group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.form-group::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    height: 3px;
+    background: #C2C2C2;
+    border-radius: 6px;
+    width: 100%;
+}
+.form-check{
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+}
+input[type=checkbox]{
+    box-shadow: 0px 1px 3px var(--shadow);
+    border: 1px solid #CECECE;
+    border-radius: 7px;
+    background: var(--white);
+    width: 17px;
+    height: 17px;
+}
+.signup label[for=renter],
+.signup label[for=renting]{
+    /* font-family: 'Montserrat-SemiBold'; */
+    font-size: 12px;
+}
+.signup .rememberme{
+    margin-left: 10px;
+}
+.signup label[for=terms]{
+    /* font-family: 'Montserrat-Medium'; */
+    font-size: 12px; 
+    margin-left: 18px;   
+    cursor: pointer;
+}
+.signup label[for=terms] a{
+    color: #046FA7;
+    /* font-family: 'Montserrat-SemiBold'; */
+}
+.btn-signup{
+    width: 100%;
+    background: transparent;
+    outline: 0;
+    border: none;
+    text-align: center;
+    background: #0066FF;
+    padding: 14px 0;
+    /* font-family: 'Montserrat-Medium'; */
+    font-size: 15px;
+    color: var(--white);
+    cursor: pointer;
+}
+.btn-signup:hover{
+    background: #0f478f;
+    transition: 0.2;
+}
+.social-signup{
+    /* display: grid;
+    grid-template-columns: 21% 21% 21%;
+    grid-column-gap: 18.5%; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+.social-signup .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    height: 33px;
+    background: var(--white);
+    padding: 5px 22px;
+}
+.form p{
+    text-align: center;
+    margin-top: 15px;
+    /* font-family: 'Montserrat-Medium'; */
+    font-size: 12px;
+    color: var(--dark-border)
+}
+.form p a{
+    color: #0066FF;
+}
+.signup .icon-checkmar{
+    display: none;
+}
+.signup .correct .icon-checkmar{
+    position: absolute;
+    display: block;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    bottom: 12px;
+    border-radius: 50px;
+    background: #26AEF5;
+}
+.signup .correct .icon-checkmar::after{
+    top: 45%;
+    left: 30%;
+    display: block;
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 10px;
+    border: solid var(--white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg) translate(-50%, -50%);
+}
+.correct::after{
+    background: #0B6EA7 !important;
+}
+.correct input {
+    color:  #0B6EA7 !important;
+    opacity: 1 !important;
+}
+.errors{
+    color: var(--red) !important;
+}
+@media (max-width:767px){
+    .signup-label {
+        padding-top: 36px;
+    }
+    .signup-label + .header-wrap{
+        width: 100%;
+    }
+    .signup{
+        display: block;
+        height: auto;
+    }
+    .signup .info{
+        height: 300px;
+    }
+    .signup .form{
+        width: 88%;
+        margin: 0 auto;
+    }
+    .form button,
+    .form .social-signup{
+        margin-top: 40px;
+        /* width: 100%; */
+        /* font-family: "Poppins-Medium" */
+    }
+    .social-signup .col{
+        border-radius: 9px;
+        border-color: var(--dark-border)
+    }
+
+    .signup .checkmark{
+        border-radius: 0;
+    }
+    .signup label{
+        /* font-family: "Poppins-Medium"; */
+        color: #090202;
+    }
+    .signup .form-group::after{
+        height: 2px;
+    }
+    .form form input[type=text], .form form input[type=password], .form form input[type=email]{
+        /* font-family: "Poppins" */
+    }
+    .correct input{
+        color: #355584 !important;
+    }
+    .correct::after{
+        background:  #0F478F !important; 
+    }
+    .signup .correct .icon-checkmar{
+        background: #1480EC !important;
+    }
+    .signup label[for=terms]{
+        color: #090202;
+        /* font-family: "Poppins" */
+    }
+    .signup label[for=terms] a{
+        /* font-family: "Poppins-Bold"; */
+        color: #0F478F;
+    }
+    .form p{
+        /* font-family: "Poppins-Medium"; */
+        color: #090202;
+    }
+    .form p a{
+        /* font-family: "Poppins-SemiBold"; */
+        color: #0F478F;
+    }
+    .signup .info .inner-items{
+        width:75%
+    }
+    .signup .info .inner-items .title1 h3{
+        /* font-family: "Poppins-Bold"; */
+        font-size: 25px;
+    }
+    .info .inner-items .title2 h2{
+        /* font-family: "Poppins-Bold"; */
+        font-size: 30px;
+        margin-left: 35px;
+    }
+    .info .inner-items .title2::after,
+    .info .inner-items .title2{
+        width: 100%;
+    }
+    .info .inner-items .title2 .boxes span {
+        width: 15px;
+        height: 15px;
+        border-top: 6px solid var(--white);
+        border-right: 6px solid var(--white);
+        margin-right: -4px;
+        transform: rotate(45deg) skew(5deg, 5deg);
+    }
+}

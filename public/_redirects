@@ -1,0 +1,5 @@
+
+
+/api/* https://api.cribng.com/api/:splat 200
+/public/* https://api.cribng.com/public/:splat 200
+/* /index.html 200  
